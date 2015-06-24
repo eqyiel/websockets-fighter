@@ -12,7 +12,7 @@
   communication.  Tested using Firefox 38.0.5 and Chromium 43.0.2357.125.  The
   WebSockets API is experimental, so if it doesn't work in your browser you
   might have better luck with one of those.  There's a demo server running
-  [http://rkm.id.au:8080][here].  If there are no other players, try opening a
+  [[http://rkm.id.au:8080][here]].  If there are no other players, try opening a
   second instance in a new tab or window.
 
 * How to play

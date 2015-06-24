@@ -283,5 +283,6 @@ function Game() {
 }
 
 window.addEventListener("load", function() {
+  // bootstrap
   var go = new Game();
 }, false);

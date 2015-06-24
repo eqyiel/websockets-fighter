@@ -17,7 +17,7 @@
 // You should have received a copy of the GNU General Public License
 // along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-var Animator = function(data, sprites) {
+function Animator(data, sprites) {
   this.frame = null;
   this.ids = data;
   this.i = 0;
