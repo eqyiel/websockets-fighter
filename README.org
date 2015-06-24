@@ -1,0 +1,59 @@
+#+title: websockets-fighter
+#+author: Ruben Maher
+#+email: r@rkm.id.au
+#+options: toc:nil num:nil
+
+[[./screenshot.png]]
+
+* What is this
+  Individual game project for my topic COMP3752.  It's a two player fighting
+  style game using
+  [[https://developer.mozilla.org/en-US/docs/WebSockets][WebSockets]] for
+  communication.  Tested using Firefox 38.0.5 and Chromium 43.0.2357.125.  The
+  WebSockets API is experimental, so if it doesn't work in your browser you
+  might have better luck with one of those.  There's a demo server running
+  [http://rkm.id.au:8080][here].  If there are no other players, try opening a
+  second instance in a new tab or window.
+
+* How to play
+  You're the red cat, the objective is to push the blue cat off the platform.
+  Movement keys are =←= and =→=, attack keys are =asdf=.
+
+* Installation
+** Client
+   None.  You just need to navigate to the page in Firefox or Chrom{e,ium}.
+
+** Server
+   You need Python 3.
+   #+begin_src shell :tangle yes
+   $ git clone https://github.com/eqyiel/websockets-fighter
+   $ cd websockets-fighter
+   $ pyvenv .
+   $ source bin/activate
+   $ pip install -r dependencies.txt
+   $ ./main.py
+   #+end_src
+
+* Caveats
+  - Doesn't work on mobile devices yet, but it might in the future.  It should
+    be just a matter of listening for touch events.
+
+* Thanks
+  This project makes use of assets from:
+  - [[http://opengameart.org/users/dogchicken][dogchicken]], which can be found
+    [[opengameart.org/content/cat-fighter-sprite-sheet][here]] (CC-BY 3.0).
+  - [[http://opengameart.org/users/jetrel][Jetrel]], which can be found
+    [[opengameart.org/content/castle-platformer][here]] (public domain).
+  - [[https://commons.wikimedia.org/wiki/User:Mobius][Mobius]], which can be found
+    [[https://commons.wikimedia.org/wiki/File:Speaker_Icon.svg][here]] (public
+    domain).
+  - Tehdog, which can be found
+    [[https://commons.wikimedia.org/wiki/File:Mute_Icon.svg][here]] (public domain)
+  - [[http://opengameart.org/users/qubodup][qubodup]], which can be found
+    [[http://opengameart.org/content/37-hitspunches][here]] (public domain)
+  - [[http://opengameart.org/users/artisticdude][artisticdude]], which can be
+    found [[http://opengameart.org/content/swishes-sound-pack][here]] (public
+    domain)
+
+  [[http://codeutopia.net/blog/2009/08/21/using-canvas-to-do-bitmap-sprite-animation-in-javascript/][This
+  tutorial]] was also immensely helpful.
