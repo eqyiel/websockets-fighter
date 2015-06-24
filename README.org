@@ -41,9 +41,9 @@
 * Thanks
   This project makes use of assets from:
   - [[http://opengameart.org/users/dogchicken][dogchicken]], which can be found
-    [[opengameart.org/content/cat-fighter-sprite-sheet][here]] (CC-BY 3.0).
+    [[http://opengameart.org/content/cat-fighter-sprite-sheet][here]] (CC-BY 3.0).
   - [[http://opengameart.org/users/jetrel][Jetrel]], which can be found
-    [[opengameart.org/content/castle-platformer][here]] (public domain).
+    [[http://opengameart.org/content/castle-platformer][here]] (public domain).
   - [[https://commons.wikimedia.org/wiki/User:Mobius][Mobius]], which can be found
     [[https://commons.wikimedia.org/wiki/File:Speaker_Icon.svg][here]] (public
     domain).
