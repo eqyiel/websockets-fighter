@@ -25,7 +25,7 @@ import uuid
 class Game(websocket.WebSocketHandler):
 
     waiting_players = [] # available to all instances of this class
-    debug_p = True
+    debug_p = False
 
     def check_origin(self, origin):
         return True
@@ -36,7 +36,7 @@ class Game(websocket.WebSocketHandler):
         this Player's attribute other_player, and assign a reference to this
         Player to the other Player's attribute other_player.  Otherwise, add a
         reference to this Player to the pool of waiting_players."""
-        print("WebSocket opened")
+        self.debug("WebSocket opened")
         try:
             self.other_player = self.waiting_players.pop()
             self.stats = {
@@ -99,7 +99,7 @@ class Game(websocket.WebSocketHandler):
         if self.other_player is not None:
             try:
                 data = json.loads(message)
-                print(data)
+                self.debug(data)
                 self.other_player.message(data)
             except websocket.WebSocketClosedError:
                 pass
