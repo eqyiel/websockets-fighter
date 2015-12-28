@@ -44,14 +44,14 @@ function Player(src, ctx, ws, c, player2) {
   this.fetchSfx = function() {
     // Don't try to GET all these files for both player objects, just the one
     // that represents this client.
-    this.tryKick = new Audio("../assets/ogg/swish-1.ogg");
-    this.tryPunch = new Audio("../assets/ogg/swish-7.ogg");
-    this.trySpin = new Audio("../assets/ogg/swish-10.ogg");
-    this.tryRoll = new Audio("../assets/ogg/swish-12.ogg");
-    this.connectKick = new Audio("../assets/ogg/hit28.ogg");
-    this.connectPunch = new Audio("../assets/ogg/hit30.ogg");
-    this.connectSpin = new Audio("../assets/ogg/hit31.ogg");
-    this.connectRoll = new Audio("../assets/ogg/hit32.ogg");
+    this.tryKick = new Audio("./assets/ogg/swish-1.ogg");
+    this.tryPunch = new Audio("./assets/ogg/swish-7.ogg");
+    this.trySpin = new Audio("./assets/ogg/swish-10.ogg");
+    this.tryRoll = new Audio("./assets/ogg/swish-12.ogg");
+    this.connectKick = new Audio("./assets/ogg/hit28.ogg");
+    this.connectPunch = new Audio("./assets/ogg/hit30.ogg");
+    this.connectSpin = new Audio("./assets/ogg/hit31.ogg");
+    this.connectRoll = new Audio("./assets/ogg/hit32.ogg");
   };
 
   this.update = function() {

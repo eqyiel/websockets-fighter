@@ -64,7 +64,7 @@ function Game() {
                           function() { scale(canvas); }, false);
 
 
-  var ws = new WebSocket("ws://localhost:8080/ws");
+  var ws = new WebSocket("wss://demo.rkm.id.au:8080/ws");
 
   ws.onclose = function(){
     console.log("lol");
@@ -232,24 +232,24 @@ function Game() {
 
 
   var platform = new Image();
-  platform.setAttribute("src", "../assets/sprites/platform.png");
+  platform.setAttribute("src", "./assets/sprites/platform.png");
   var bg = new Image();
-  bg.setAttribute("src", "../assets/sprites/bg.png");
+  bg.setAttribute("src", "./assets/sprites/bg.png");
   var bg_pattern;
   bg.addEventListener("load", function() {
     bg_pattern = ctx.createPattern(bg, "repeat");
   });
   var moon = new Image();
-  moon.setAttribute("src", "../assets/sprites/moon.png");
+  moon.setAttribute("src", "./assets/sprites/moon.png");
 
   var speaker = new Image();
-  speaker.setAttribute("src", "../assets/sprites/speaker.png");
+  speaker.setAttribute("src", "./assets/sprites/speaker.png");
   var mute = new Image();
-  mute.setAttribute("src", "../assets/sprites/mute.png");
+  mute.setAttribute("src", "./assets/sprites/mute.png");
 
   var c = new CollisionTester();
-  var player2 = new Player("../assets/sprites/blue.png", ctx, ws);
-  var player1 = new Player("../assets/sprites/red.png", ctx, ws, c, player2);
+  var player2 = new Player("./assets/sprites/blue.png", ctx, ws);
+  var player1 = new Player("./assets/sprites/red.png", ctx, ws, c, player2);
   player1.fetchSfx();
 
   canvas.addEventListener("click", function(e) {

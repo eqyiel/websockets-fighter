@@ -19,7 +19,8 @@
 # You should have received a copy of the GNU General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-from tornado import web, ioloop
+import os
+from tornado import web, ioloop, httpserver
 from game import Game
 
 
@@ -34,11 +35,12 @@ app = web.Application([
     (r"/(style.css)", web.StaticFileHandler, {"path": ""}),
     (r"/js/(.*)", web.StaticFileHandler, {"path": "./js/"}),
     (r"/assets/(.*)", web.StaticFileHandler, {"path": "./assets/"})
-    # (r"/assets/sprites/(.*)", web.StaticFileHandler, {"path": "./assets/sprites/"}),
-    # (r"/assets/ogg/(.*)", web.StaticFileHandler, {"path": "./assets/ogg/"}),
-    # (r"/assets/mp3/(.*)", web.StaticFileHandler, {"path": "./assets/mp3/"})
 ])
 
 if __name__ == "__main__":
-    app.listen(8080)
+    http_server = httpserver.HTTPServer(app, ssl_options={
+        "certfile": os.path.join("/srv/certs/rkm.id.au/cert.pem"),
+        "keyfile": os.path.join("/srv/certs/rkm.id.au/key.pem")
+    })
+    http_server.listen(8080)
     ioloop.IOLoop.instance().start()
