@@ -6,14 +6,16 @@
 [[./screenshot.png]]
 
 * What is this
-  Individual game project for my topic COMP3752.  It's a two player fighting
-  style game using
-  [[https://developer.mozilla.org/en-US/docs/WebSockets][WebSockets]] for
-  communication.  Tested using Firefox 38.0.5 and Chromium 43.0.2357.125.  The
-  WebSockets API is experimental, so if it doesn't work in your browser you
-  might have better luck with one of those.  There's a demo server running
-  [[http://rkm.id.au:8080][here]].  If there are no other players, try opening a
-  second instance in a new tab or window.
+  Individual game project for my topic COMP3752.  It's a two player
+  fighting style game using
+  [[https://developer.mozilla.org/en-US/docs/WebSockets][WebSockets]]
+  for communication.  Tested using Firefox 38.0.5 and Chromium
+  43.0.2357.125.  The WebSockets API is experimental, so if it doesn't
+  work in your browser you might have better luck with one of those.
+  There's a demo server running
+  [[https://demo.rkm.id.au/websockets-fighter/][here]].  If there are
+  no other players, try opening a second instance in a new tab or
+  window.
 
 * How to play
   You're the red cat, the objective is to push the blue cat off the platform.
