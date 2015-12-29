@@ -40,7 +40,8 @@ app = web.Application([
 if __name__ == "__main__":
     http_server = httpserver.HTTPServer(app, ssl_options={
         "certfile": os.path.join("/srv/certs/rkm.id.au/cert.pem"),
-        "keyfile": os.path.join("/srv/certs/rkm.id.au/key.pem")
+        "keyfile": os.path.join("/srv/certs/rkm.id.au/key.pem"),
+        "ca_certs": os.path.join("/srv/certs/rkm.id.au/fullchain.pem")
     })
     http_server.listen(8080)
     ioloop.IOLoop.instance().start()
